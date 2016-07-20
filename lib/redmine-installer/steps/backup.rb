@@ -26,10 +26,12 @@ module Redmine::Installer::Step
     end
 
     def down
-      if @database_backed_up
-        say(:restoring_database)
-        database_restore
-      end
+      # It could be dangerous
+      #
+      # if @database_backed_up
+      #   say(:restoring_database)
+      #   database_restore
+      # end
     end
 
     def final
